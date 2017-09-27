@@ -7,36 +7,39 @@
   <version>1.0-SNAPSHOT</version>
   <name>wechat.demo Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <spring.version>4.3.11.RELEASE</spring.version>
+  </properties>
+
   <dependencies>
-
     <!--spring-->
-
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>4.3.11.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>4.3.11.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>4.3.11.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
-      <version>4.3.11.RELEASE</version>
+      <version>${spring.version}</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
@@ -61,10 +64,55 @@
       <version>4.5.3</version>
     </dependency>
 
+    <!--日志-->
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.25</version>
+    </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.25</version>
+    </dependency>
 
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.2.3</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.logback-extensions/logback-ext-spring -->
+    <dependency>
+      <groupId>org.logback-extensions</groupId>
+      <artifactId>logback-ext-spring</artifactId>
+      <version>0.1.4</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>wechat.demo</finalName>
+
+    <!--指定jdk版本-->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-complier-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
