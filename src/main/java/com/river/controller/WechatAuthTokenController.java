@@ -28,7 +28,7 @@ public class WechatAuthTokenController {
 	 * @return
 	 * @throws IOException
 	 */
-	@RequestMapping("/token")
+	@RequestMapping(value = "/token")
 	@ResponseBody
 	public String authToken(String signature ,String echostr , String timestamp ,String nonce)
 			throws  IOException {
