@@ -45,7 +45,7 @@ public class MessageUtil {
 
     /**
      * 对象转xml
-     * @param textMessage
+     * @param obj
      * @return
      */
     public static String textMessageToXml(Object obj) {
