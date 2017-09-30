@@ -2,7 +2,11 @@ package com.river.common;
 
 public enum ResEnum {
     SUCCESS("000000","成功"),
-    SYS_ERROR("000001","系统异常");
+    SYS_ERROR("000001","系统异常"),
+    PARAM_EXCEPTION("000002", "参数异常");
+
+
+
     ResEnum(String resCode, String resMsg) {
         this.resCode = resCode;
         this.resMsg = resMsg;
