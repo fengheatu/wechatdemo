@@ -1,4 +1,4 @@
-package com.river.controller;
+package com.river.controller.accredit;
 
 import com.alibaba.fastjson.JSONObject;
 import com.river.util.AuthUtil;

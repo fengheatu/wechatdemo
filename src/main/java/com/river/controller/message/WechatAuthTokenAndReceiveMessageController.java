@@ -1,4 +1,4 @@
-package com.river.controller;
+package com.river.controller.message;
 
 import com.river.util.MessageUtil;
 import com.river.util.SHA1;
@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Map;
 
 @Controller
 @RequestMapping("/auth")
-public class WechatAuthTokenController {
+public class WechatAuthTokenAndReceiveMessageController {
 
-	private static final Logger logger = LoggerFactory.getLogger(WechatAuthTokenController.class);
+	private static final Logger logger = LoggerFactory.getLogger(WechatAuthTokenAndReceiveMessageController.class);
 
 	// 自定义 token
 	private static final String TOKEN = "river";
