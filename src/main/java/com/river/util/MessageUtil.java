@@ -42,12 +42,13 @@ public class MessageUtil {
 
     /**
      * 对象转xml
-     * @param obj
+     * @param t
      * @return
      */
-    public static String textMessageToXml(Object obj) {
+    public static <T> String textMessageToXml(T t) {
         XStream xStream = new XStream();
-        return xStream.toXML(obj);
+        xStream.alias("xml",t.getClass());
+        return xStream.toXML(t);
     }
 
 }
